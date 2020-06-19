@@ -8,7 +8,7 @@
 ### 截图
 
 <p align="center">
-	<a href="ishacker.net"><img src="https://gitee.com/yubuntu0109/img/blob/master/vueblog/index-screenshot.png"></a>
+	<a href="https://gitee.com/yubuntu0109/img/blob/master/vueblog/index-screenshot.png"><img src="https://gitee.com/yubuntu0109/img/blob/master/vueblog/index-screenshot.png"></a>
 </p>
 
 
