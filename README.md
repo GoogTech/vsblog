@@ -8,7 +8,7 @@
 ### 截图
 
 <p align="center">
-	<a href="https://gitee.com/yubuntu0109/img/blob/master/vueblog/index-screenshot.png"><img src="https://gitee.com/yubuntu0109/img/blob/master/vueblog/index-screenshot.png"></a>
+	<a><img src="https://anonymous.ishacker.net/2020/06/10/about-page-image/vsblog-index-screenshot.png"></a>
 </p>
 
 
