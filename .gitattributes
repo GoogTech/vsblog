@@ -2,4 +2,5 @@
 *.css linguist-language=vue
 *.html linguist-language=vue
 *.java linguist-language=vue
+*.sql linguist-language=vue
 *.tsql linguist-language=vue
