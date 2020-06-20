@@ -13,10 +13,12 @@
                         <!-- 文章列表 -->
                         <el-card class="box-card" v-for="blog in blogs">
                             <div slot="header" class="clearfix">
-                                <router-link :to="{name: 'BlogDetail',params: {blogId:blog.id}}">
-                                    <span class="m-title">{{ blog.title }}</span>
-                                </router-link>
-                                <!-- 待开发功能:delete and link -->
+                                <span class="m-title">
+                                    <router-link class="router-link-active" :to="{name: 'BlogDetail',params: {blogId:blog.id}}">
+                                        {{ blog.title }}
+                                    </router-link>
+                                </span>
+                                <!-- 文章编辑,复制链接,删除功能 -->
                                 <el-button @click="del(blog.id)" style="float: right;" type="danger" plain icon="el-icon-delete" circle></el-button>
                                 <el-button @click="cplink(blog.id)" style="float: right; margin-right: 10px" type="success" plain icon="el-icon-link" circle></el-button>
                                 <router-link :to="{name: 'BlogEdit',params:{blogId: blog.id}}">
@@ -164,7 +166,8 @@
     /*文章标题样式*/
     .m-title {
         font-size: 22px;
-        font-family: 'Dubai Light'
+        font-family: 'Dubai Light';
+        text-decoration: none;
     }
     /*文章描述样式*/
     .m-desc {
@@ -193,6 +196,9 @@
     }
     /*清除router-link标签生成的下划线*/
     a {
+        text-decoration: none;
+    }
+    .router-link-active {
         text-decoration: none;
     }
 </style>
