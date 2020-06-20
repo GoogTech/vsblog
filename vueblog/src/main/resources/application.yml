@@ -2,18 +2,18 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql8.0+
-    url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql:///vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: GoodTime
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
 server:
-  port: 9000
+  port: 8080
 
 shiro-reids:
   enabled: true
   redis-manager:
-    host: 127.0.0.1:6379
+    host: 49.233.79.152:6379
 
 markerhub:
   jwt:
@@ -22,3 +22,8 @@ markerhub:
     # token有效时长，7天，单位秒
     expire: 604800
     header: Authorization
+
+# java.io.FileNotFoundException: class path resource [templates/]
+# cannot be resolved to absolute file path because it does not reside in the file system:
+# jar:file:/tmp/vueblog-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/mybatis-plus-generator-3.2.0.jar!/templates/
+# debug: true
