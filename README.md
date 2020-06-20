@@ -89,14 +89,15 @@ mysql -u root -p < 'the specified path of database file'
 
 5. 运行项目
 ```shell
-# kill the specified server port
-1. kill -9 $(netstat -nlp | grep :9000 | awk '{print $7}' | awk -F"/" '{ print $1 }')
+# kill the specified server port:8080
+kill -9 $(netstat -nlp | grep :8080 | awk '{print $7}' | awk -F"/" '{ print $1 }')
 
 # run
-2. nohup /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /tmp/my-blog-3.0.1-SNAPSHOT.jar > iblog.file 2>&1 &
+# nohup /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /tmp/vueblog-0.0.1-SNAPSHOT.jar > vsblog.file 2>&1 &
+nuhup -jar vueblog-0.0.1-SNAPSHOT.jar > vsblog.file 2>&1 &
 
 # test
-3. http://ip:8080/
+http://ip:8080/
 ```
 
 6. 绑定域名
