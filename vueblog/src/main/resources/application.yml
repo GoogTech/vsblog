@@ -3,8 +3,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql8.0+
     url: jdbc:mysql:///vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-    username: root
-    password: GoodTime
+    username:
+    password:
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
 server:
