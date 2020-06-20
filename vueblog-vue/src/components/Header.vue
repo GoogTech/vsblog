@@ -5,22 +5,23 @@
                 <div>
                     <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect">
                         <el-menu-item index="4">
-                            <span><el-link href="/blog">主页</el-link></span>
+                            <router-link :to="{name: 'Index'}">主页</router-link>
                         </el-menu-item>
                         <el-menu-item index="4">
-                            <span><el-link href="/blog/add">发表</el-link></span>
+                            <router-link :to="{name: 'BlogAdd'}">发表</router-link>
+                        </el-menu-item>
+                        <!-- 归档,分类,友链,留言:待开发的新功能 -->
+                        <el-menu-item index="4">
+                            <span><el-link>归档</el-link></span>
                         </el-menu-item>
                         <el-menu-item index="4">
-                            <span><el-link href="/blog/archive">归档</el-link></span>
+                            <span><el-link>分类</el-link></span>
                         </el-menu-item>
                         <el-menu-item index="4">
-                            <span><el-link href="/blog/tag">分类</el-link></span>
+                            <span><el-link>友链</el-link></span>
                         </el-menu-item>
                         <el-menu-item index="4">
-                            <span><el-link href="/blog/link">友链</el-link></span>
-                        </el-menu-item>
-                        <el-menu-item index="4">
-                            <span><el-link href="/blog/comment">留言</el-link></span>
+                            <span><el-link>留言</el-link></span>
                         </el-menu-item>
                         <div class="m-user-info">
                             <el-submenu index="2">
@@ -28,8 +29,8 @@
                                     <img :src="user.avatar" width="30px"/> {{user.username}}
                                 </template>
                                 <el-menu-item index="2-1">
-                                    <span v-show="!islogin"><el-link href="/login" type="success">登录</el-link></span>
-                                    <span v-show="islogin"><el-link type="danger" @click="logout">注销</el-link></span>
+                                        <span v-show="!islogin"><el-link type="success" @click="login">登录</el-link></span>
+                                        <span v-show="islogin"><el-link type="danger" @click="logout">注销</el-link></span>
                                 </el-menu-item>
                             </el-submenu>
                         </div>
@@ -46,6 +47,8 @@
 </template>
 
 <script>
+    // 引入element-ui依赖
+    import Element from 'element-ui';
     export default {
         name: "Header",
         data() {
@@ -58,6 +61,7 @@
             }
         },
         methods: {
+            //注销
             logout() {
                 const _this = this
                 //首先调用后端logout接口(因该接口需要认证权限,所以需要传入token)
@@ -68,8 +72,14 @@
                     }
                 }).then(res => {
                     _this.$store.commit("REMOVE_INFO")
+                    Element.Message.info("注销成功 !");
                     _this.$router.push("/login")
                 })
+            },
+            //登录
+            login(){
+                const _this = this
+                _this.$router.push("/login")
             }
         },
         //页面创建时即会调用,进而获取用户信息
@@ -96,5 +106,12 @@
     /*导航栏中用户信息样式*/
     .m-user-info{
        float: right;
+    }
+    /*清除router-link标签生成的下划线等样式*/
+    a {
+        text-decoration: none;
+    }
+    .router-link-active {
+        text-decoration: none;
     }
 </style>
