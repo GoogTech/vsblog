@@ -8,7 +8,7 @@ import router from './router'
 import store from './store'
 
 // 自定义全局请求头(后台)
-axios.defaults.baseURL = "http://localhost:9000"
+axios.defaults.baseURL = "http://49.233.79.152:8080"
 
 // 自定义前置拦截
 axios.interceptors.request.use(config => {
