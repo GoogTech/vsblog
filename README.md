@@ -134,7 +134,22 @@ http://vue.iblog.run
 
 ### 注意事项
 
-*我使用的 MySQL 的版本号为 `8.0.11` ,如果你的数据库版本低于它，请修改如下配置 :*
+#### 若需本地运行该项目，请修改如下配置 :
+1. 前端 : `axios.js`
+```js
+// 自定义全局请求头(后台)
+// axios.defaults.baseURL = "http://49.233.79.152:8080"
+axios.defaults.baseURL = "http://localhost:8080"
+```
+
+2. 后端 : `application.yml`
+```js
+redis-manager:
+	// host: 49.233.79.152:6379
+	host: 127.0.0.1:6379
+```
+
+#### 该项目使用的 MySQL 的版本号为 `8.0.11` ,如果你的数据库版本低于它，请修改如下配置 :
 1. `pom.xml` : 修改 mysql-connector-java 的版本
 2. `application.yml` : 将 driver-class-name 修改为 com.mysql.jdbc.Driver
 
