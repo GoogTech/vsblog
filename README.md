@@ -46,90 +46,107 @@
 ### 部署
 > *以下是我在 `Ubuntu18.04` 远程服务器上部署 `vsblog` 的流程.*
 
-1. 安装 JDK
-```shell
-# install jdk
-sudo apt install openjdk-8-jdk-headless
+<details>
+    <summary>1. 安装 JDK</summary>
 
-# check
-java -version
-```
+    ```shell
+	# install jdk
+	sudo apt install openjdk-8-jdk-headless
 
-2. 安装 MySQL8.0+
-```shell
-# the installation package as follows you need to download it
-# decompress the installation package
-sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+	# check
+	java -version
+	```
+</details>
 
-# update installation package
-sudo apt update 
+<details>
+    <summary>2. 安装 MySQL8.0+</summary>
+    
+	```shell
+	# the installation package as follows you need to download it
+	# decompress the installation package
+	sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
 
-# install mysql server
-sudo apt install mysql-server 
+	# update installation package
+	sudo apt update 
 
-# run mysql
-mysql -u root -p
-```
+	# install mysql server
+	sudo apt install mysql-server 
 
-3. 安装 Redis
-```shell
-# install redis server
-sudo apt-get install redis-server
+	# run mysql
+	mysql -u root -p
+	```
+</details>
 
-# check redis server status
-netstat -nlt|grep 6379
+<details>
+    <summary>3. 安装 Redis</summary>
+    
+	```shell
+	# install redis server
+	sudo apt-get install redis-server
 
-# test
-redis-cli
-```
+	# check redis server status
+	netstat -nlt|grep 6379
 
-4. 导入 `vueblog.sql` 数据库
-```shell
-# mysql -u root -p < vueblog.sql
-mysql -u root -p < 'the specified path of database file'
-```
+	# test
+	redis-cli
+	```
+</details>
 
-5. 运行项目
-```shell
-# kill the specified server port:8080
-kill -9 $(netstat -nlp | grep :8080 | awk '{print $7}' | awk -F"/" '{ print $1 }')
+<details>
+    <summary>4. 导入 vueblog.sql 数据库</summary>
+    
+	```shell
+	# mysql -u root -p < vueblog.sql
+	mysql -u root -p < 'the specified path of database file'
+	```
+</details>
 
-# run
-# nohup /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /tmp/vueblog-0.0.1-SNAPSHOT.jar > vsblog.file 2>&1 &
-nuhup -jar vueblog-0.0.1-SNAPSHOT.jar > vsblog.file 2>&1 &
+<details>
+    <summary>5. 运行项目</summary>
+    
+	```shell
+	# kill the specified server port:8080
+	kill -9 $(netstat -nlp | grep :8080 | awk '{print $7}' | awk -F"/" '{ print $1 }')
 
-# test
-http://ip:8080/
-```
+	# run
+	# nohup /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /tmp/vueblog-0.0.1-SNAPSHOT.jar > vsblog.file 2>&1 &
+	nuhup -jar vueblog-0.0.1-SNAPSHOT.jar > vsblog.file 2>&1 &
 
-6. 绑定域名
-*忽略端口号，例如 : http://vue.iblog.run:8080 -> http://vue.iblog.run*
-```shell
-# first you need install the nginx
-sudo apt install nginx
+	# test
+	http://ip:8080/
+	```
+</details>
 
-# vim /etc/nginx/nginx.conf
-# such as the example configuraion be added as follows
-http{
-    server{
-	    listen  80;
-        server_name  vue.iblog.run; 
-        location / {
-		    proxy_pass  http://ip:8080;	
-	    }            
+<details>
+    <summary>6. 绑定域名</summary>
+    
+	```shell
+	# first you need install the nginx
+	sudo apt install nginx
+
+	# vim /etc/nginx/nginx.conf
+	# such as the example configuraion be added as follows
+	http{
+		server{
+			listen  80;
+			server_name  vue.iblog.run; 
+			location / {
+				proxy_pass  http://ip:8080;	
+			}            
+		}
 	}
-}
-. . .
+	. . .
 
-# then check the default configuration file
-nginx -t
+	# then check the default configuration file
+	nginx -t
 
-# reload the nginx
-nginx -s reload
+	# reload the nginx
+	nginx -s reload
 
-# test
-http://vue.iblog.run
-```
+	# test
+	http://vue.iblog.run
+	```
+</details>
 
 
 ### 注意事项
