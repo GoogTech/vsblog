@@ -1,4 +1,8 @@
 ## 一个超简洁的个人博客系统
+<img src="https://img.shields.io/github/commit-activity/m/YUbuntu0109/vsblog?color=ff69b4"></img>
+<img src="https://img.shields.io/github/repo-size/YUbuntu0109/vsblog"></img>
+<img src="https://img.shields.io/github/license/YUbuntu0109/vsblog.svg"></img>
+
 *最近在学习前后端分离开发模式，为了总结进而写了这个小项目 : ~~http://49.233.79.152:8080~~ `( 云主机已停用 )`*
 
 > 账号: `admin`，密码: `iblog.run` ( 拜托不要删除我的数据，请另行创建文章后测试 )
