@@ -1,4 +1,7 @@
 ## 一个超简洁的个人博客系统
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4ebf4b69335846199048da22078140c3)](https://app.codacy.com/gh/YUbuntu0109/vsblog?utm_source=github.com&utm_medium=referral&utm_content=YUbuntu0109/vsblog&utm_campaign=Badge_Grade)
+
 <img src="https://img.shields.io/github/commit-activity/m/YUbuntu0109/vsblog?color=ff69b4"></img>
 <img src="https://img.shields.io/github/repo-size/YUbuntu0109/vsblog"></img>
 <img src="https://img.shields.io/github/license/YUbuntu0109/vsblog.svg"></img>
