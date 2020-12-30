@@ -1,4 +1,5 @@
 ## 一个超简洁的个人博客系统
+<img src="https://app.codacy.com/project/badge/Grade/02e473424ae64646b7f24ec11455bc42"/></img>
 <img src="https://img.shields.io/github/commit-activity/m/YUbuntu0109/vsblog?color=ff69b4"></img>
 <img src="https://img.shields.io/github/repo-size/YUbuntu0109/vsblog"></img>
 <img src="https://img.shields.io/github/license/YUbuntu0109/vsblog.svg"></img>
