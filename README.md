@@ -1,5 +1,5 @@
 <p align="center">
-	<a href=""><img src="https://user-images.githubusercontent.com/43493852/127585072-ccafe163-4a43-439e-9594-156b4d10a72e.png"></a>
+	<img src="https://user-images.githubusercontent.com/43493852/127585072-ccafe163-4a43-439e-9594-156b4d10a72e.png">
 	<p align="center">
 	<img src="https://app.codacy.com/project/badge/Grade/02e473424ae64646b7f24ec11455bc42"/></img>
 	<img src="https://img.shields.io/github/commit-activity/m/GoogTech/vsblog?color=ff69b4"></img>
