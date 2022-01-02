@@ -174,7 +174,7 @@ redis-manager:
 1. `pom.xml` : 修改 mysql-connector-java 的版本
 2. `application.yml` : 将 driver-class-name 修改为 com.mysql.jdbc.Driver
 
-> 详情请参考我的博文 : [JDBC-常见错误分析](https://goog.tech/2019/03/14/JDBC-%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90/)
+> 详情请参考我的博文 : [JDBC-常见错误分析](https://goog.tech/blog/2019/03/14/JDBC-%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90/)
 
 
 ### 致谢
