@@ -2,9 +2,9 @@
 	<a href=""><img src="https://user-images.githubusercontent.com/43493852/127585072-ccafe163-4a43-439e-9594-156b4d10a72e.png"></a>
 	<p align="center">
 	<img src="https://app.codacy.com/project/badge/Grade/02e473424ae64646b7f24ec11455bc42"/></img>
-	<img src="https://img.shields.io/github/commit-activity/m/YUbuntu0109/vsblog?color=ff69b4"></img>
-	<img src="https://img.shields.io/github/repo-size/YUbuntu0109/vsblog"></img>
-	<img src="https://img.shields.io/github/license/YUbuntu0109/vsblog.svg"></img>
+	<img src="https://img.shields.io/github/commit-activity/m/GoogTech/vsblog?color=ff69b4"></img>
+	<img src="https://img.shields.io/github/repo-size/GoogTech/vsblog"></img>
+	<img src="https://img.shields.io/github/license/GoogTech/vsblog.svg"></img>
 	</p>
 </p>
 
@@ -174,7 +174,7 @@ redis-manager:
 1. `pom.xml` : 修改 mysql-connector-java 的版本
 2. `application.yml` : 将 driver-class-name 修改为 com.mysql.jdbc.Driver
 
-> 详情请参考我的博文 : [JDBC-常见错误分析](https://googtech.io/2019/03/14/JDBC-%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90/)
+> 详情请参考我的博文 : [JDBC-常见错误分析](https://goog.tech/2019/03/14/JDBC-%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%88%86%E6%9E%90/)
 
 
 ### 致谢
